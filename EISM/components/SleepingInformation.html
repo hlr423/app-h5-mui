@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-content>.mui-card:first-child{
+				margin-top: 5px;
+			}
+			.mui-card{
+				margin:0;
+			}
+			table tr td{
+				text-align: center;
+			}
+			.mui-bar{
+				padding: 0;
+				background-color: #007AFF;
+			}
+			.mui-title{
+				color: white;
+			}
+			input[type=date]{
+				margin-bottom: 0;
+			}
+			table tr th{
+				text-align: center;
+				padding: 5px;
+				background-color:rgba(12, 146, 240, 0.15);
+				color: #242424;
+			}
+			table tr td{
+				text-align: center;
+				padding: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"></a>
+			<h1 class="mui-title">就寝离寝管理>就寝离寝一览</h1>
+		</header>
+		
+		<div class="mui-content">
+			
+			<div class="mui-card" >
+				<div style="display: flex;justify-content: space-around;">				
+					<div  style="width: 30%;font-size: 16px;line-height: 10vh;">日期</div>
+					<input type="date" name="" id="" value="2019-09-23" style="margin-top: 1.5vh;width: 50%;"/>
+				</div>
+				<div style="margin-bottom: 2.5vh;height: auto;">
+					<div style="margin-bottom: 2vh;">
+						<hr  style="border:0;background-color:#efeff4;height:5px"/>
+					</div>
+					<table border="0" width="100%">
+						<tr>
+							<th>就寝</th>
+							<th>正常</th>
+							<th>晚归寝</th>
+							<th>未归寝</th>
+						</tr>
+						<tr>
+							<td>1号楼</td>
+							<td>43</td>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+							<tr>
+							<td>3号楼</td>
+							<td>42</td>
+							<td>3</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>4号楼</td>
+							<td>40</td>
+							<td>4</td>
+							<td>0</td>
+						</tr>
+							<tr>
+							<td>2号楼</td>
+							<td>38</td>
+							<td>5</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>5号楼</td>
+							<td>37</td>
+							<td>1</td>
+							<td>4</td>
+						</tr>
+					</table>
+					<div style="margin: 2vh auto;">
+						<hr  style="border:0;background-color:#efeff4;height:5px"/>
+					</div>
+					<table border="0" width="100%">
+						<tr>
+							<th>离寝</th>
+							<th>正常</th>
+							<th>晚离寝</th>
+							<th>未离寝</th>
+						</tr>
+						<tr>
+							<td>1号楼</td>
+							<td>34</td>
+							<td>5</td>
+							<td>6</td>
+						</tr>
+							<tr>
+							<td>3号楼</td>
+							<td>37</td>
+							<td>5</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>4号楼</td>
+							<td>35</td>
+							<td>4</td>
+							<td>5</td>
+						</tr>
+							<tr>
+							<td>2号楼</td>
+							<td>38</td>
+							<td>4</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>5号楼</td>
+							<td>35</td>
+							<td>3</td>
+							<td>4</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			 mui('.mui-card').on('.dd',function() {
+			 	console.log('dddddddddd')
+                //规定年月日的选择
+                var dtpicker = new mui.DtPicker({
+                    type: "date", //设置日历初始视图模式    //真正的月份比写的多一个月。  type的类型你还是可以选择date datetime month time hour 
+                    beginDate: new Date(2000, 01, 01, 0, 0), //设置开始日期   ///yg备注：括号中不填
+                    endDate: new Date(2020, 01, 01, 0, 0), //设置结束日期    //真正的是10.21
+                    labels: ['年', '月', '日'] //设置默认标签区域提示语 
+                });
+                dtpicker.show(function(e) {
+                    console.log(e);
+                    //获取到时间戳
+                    let date = new Date(e.value).getTime() / 1000;
+                    console.log(date);
+                });
+            });
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css" >
+			.mui-card{
+				margin:0;
+			}
+			.mui-content>.mui-card:first-child{
+				margin: 0;
+			}
+			p{
+				color: white;
+			}
+			.mui-bar{
+				padding: 0;
+				background-color: #007AFF;
+			}
+			.mui-title{
+				color: white;
+			}
+			.eism_today_li {
+				display: flex;
+				justify-content: space-between;
+				width: 80%;
+				height: 100px;
+				border: 1px solid white;
+				border-radius: 8px;
+				margin-top: 3%;
+				box-shadow: 1px 1px 3px 1px #E3E3E3;
+			}
+			.eism_today_li:hover{
+				box-shadow: 1px 1px 3px 1px #87CEEB;
+			}
+			.eism_today_li>div{
+				margin-left: 8%;
+				text-align: center;
+			}
+			.eism_today_li_name span:first-child{
+				color: white;
+				margin-right: 8%;
+			}
+			.eism_today_li_name span:last-child{
+				color: white;
+				margin-left: 8%;
+			}
+
+			.eism_today_title{
+				/*margin-top: 2.5vh;*/
+			}
+			.mui-table-view.mui-grid-view{
+				padding: 0 5px 10px 0;
+			}
+			
+			/*.mui-bar{
+				padding: 0;
+				background-color: #007AFF;
+			}*/
+			
+		</style>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title" style="color: white;">教育综合安防管理平台</h1>
+		</header>-->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"></a>
+			<h1 class="mui-title" >今日概览</h1>
+		</header>
+		
+		<div class="mui-content">
+			
+			<div class="mui-card">
+				<div class="eism_today_title">
+					<p></p>
+				</div>
+				<ul class="mui-table-view mui-grid-view" style="display: flex;justify-content: space-around;flex-wrap:wrap;margin-bottom: 2.5vh;">
+			        <li class="mui-table-view-cell mui-media mui-col-xs-6 eism_today_li" style="display: flex;background-color: #76d1ee;padding-top: 20px;">
+			        	<div >
+			        		<p class="mui-icon mui-icon-contact"  style="font-size: 2em;"></p>
+			        		<p>上学</p>
+			        	</div>
+			        	
+				        <div style="width: 60%;">
+				        	<p class="eism_today_li_name">	<span>准时</span><span style="font-size: 20px;">218</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>迟到</span><span style="font-size: 20px;">25</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>未到</span><span style="font-size: 20px;">7</span><span>人</span></p>
+				        </div>
+			        </li>
+			         <li class="mui-table-view-cell mui-media mui-col-xs-6 eism_today_li" style="display: flex;background-color: #6067fd;padding-bottom: 5px;padding-top: 20px;">			     
+			        	<div >
+			        		<p class="mui-icon mui-icon-contact"  style="font-size: 2em;"></p>
+			        		<p>放学</p>
+			        	</div>
+				        <div style="width: 60%;">
+				        	<p class="eism_today_li_name">	<span>准时</span><span style="font-size: 20px;">209</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>早退</span><span style="font-size: 20px;">11</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>未离</span><span style="font-size: 20px;">30</span><span>人</span></p>
+				        </div>
+			        </li>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-6 eism_today_li" style="display: flex;background-color: #eec478;padding-bottom: 5px;padding-top: 20px;">
+			        	<div >
+			        		<p class="mui-icon mui-icon-contact"  style="font-size: 2em;"></p>
+			        		<p>就寝</p>
+			        	</div>
+			        
+				        <div style="width: 60%;">
+				        	<p class="eism_today_li_name">	<span>准时</span><span style="font-size: 20px;">200</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>晚归</span><span style="font-size: 20px;">15</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>未归</span><span style="font-size: 20px;">7</span><span>人</span></p>
+				        </div>
+			        </li>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-6 eism_today_li" style="display: flex;background-color: #7beead;padding-bottom: 5px;padding-top: 20px;">
+			        	<div >
+			        		<p class="mui-icon mui-icon-contact"  style="font-size: 2em;"></p>
+			        		<p>离寝</p>
+			        	</div>
+				        <div style="width: 60%;">
+				        	<p class="eism_today_li_name">	<span>准时</span><span style="font-size: 20px;">179</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>晚离</span><span style="font-size: 20px;">21</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>未离</span><span style="font-size: 20px;">22</span><span>人</span></p>
+				        </div>
+			        </li>
+			             <li class="mui-table-view-cell mui-media mui-col-xs-6 eism_today_li" style="display: flex;background-color: #ee8147;padding-bottom: 5px;padding-top: 20px;">
+			        	
+			        	<div style="margin-left: 3%;">
+			        		<p class="mui-icon mui-icon-contact"  style="font-size: 2em;"></p>
+			        		<p>外来人员</p>
+			        	</div>
+				        <div style="width: 60%;">
+				        	<p class="eism_today_li_name">	<span>入校</span><span style="font-size: 20px;">20</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>如宿舍</span><span style="font-size: 20px;">15</span><span>人</span></p>
+				        	<!--<p class="eism_today_li_name">	<span>未到</span><span style="font-size: 20px;">7</span><span>人</span></p>-->
+				        </div>
+			        </li>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-6 eism_today_li" style="display: flex;background-color: #ee8996;padding-bottom: 5px;">
+			        	
+			        	<div style="margin-left: 0%;">
+			        		<p class="mui-icon mui-icon-contact"  style="font-size: 2em;"></p>
+			        		<p >教职工考勤</p>
+			        	</div>
+				        <div style="width: 60%;">
+				        	<p class="eism_today_li_name">	<span>迟到</span><span style="font-size: 20px;">6</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>未到</span><span style="font-size: 20px;">1</span><span>人</span></p>
+				        	<p class="eism_today_li_name">	<span>早退</span><span style="font-size: 20px;">5</span><span>人</span></p>
+				        </div>
+			        </li>
+		    	</ul>
+			</div>
+		</div>
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

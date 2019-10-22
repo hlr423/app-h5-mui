@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-content>.mui-card:first-child{
+				margin-top: 1vh;
+			}
+			.mui-card{
+				margin:0;
+			}
+			input[type=date]{
+				margin-bottom: 0;
+			}
+			table tr th{
+				text-align: center;
+				padding: 5px;
+				background-color:rgba(12, 146, 240, 0.15);
+				color: #242424;
+			}
+			table tr td{
+				text-align: center;
+				padding: 5px;
+			}
+			.mui-bar{
+				padding: 0;
+				background-color: #007AFF;
+			}
+			.mui-title{
+				color: white;
+			}
+			.triangle-down {
+			    width: 0;
+			    height: 0;
+			    border-left: 5px solid transparent;
+			    border-right: 5px solid transparent;
+			    border-top: 10px solid red;
+			   display: inline-block;
+			}
+			.mui-toast-container {
+				bottom: 40% !important;			
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"></a>
+			<h1 class="mui-title">就寝离寝管理>异常数据查询</h1>
+		</header>
+		
+		<div class="mui-content">
+			
+			<div class="mui-card" >
+				<div style="display: flex;justify-content: space-around;">				
+					<div  style="width: 30%;font-size: 16px;line-height: 10vh;">日期</div>
+					<input type="date" name="" id="" value="2019-09-23" style="margin-top: 1.5vh;width: 50%;"/>
+				</div>
+				<div style="margin-bottom: 2.5vh;height: auto;">
+					<div style="margin-bottom: 5%;">
+						<hr  style="border:0;background-color:#efeff4;height:5px"/>
+					</div>
+					<table border="0" width="100%">
+						<tr>
+							<th>姓名</th>
+							<th>宿舍 <span class="triangle-down" ></span></th>
+							<th>状态<span class="triangle-down"></span></th>
+						</tr>
+							<tr>
+							<td>张三</td>
+							<td>1号楼</td>
+							<td>晚归寝</td>
+						</tr>	
+						</tr>
+							<tr>
+							<td>李四</td>
+							<td>1号楼</td>
+							<td>晚归寝</td>
+						</tr>
+						</tr>
+							<tr>
+							<td>王五</td>
+							<td>2号楼</td>
+							<td>晚归寝</td>
+						</tr>
+						</tr>
+							<tr>
+							<td>赵六</td>
+							<td>2号楼</td>
+							<td>未归寝</td>
+						</tr>
+						</tr>
+							<tr>
+							<td>郭七</td>
+							<td>2号楼</td>
+							<td>未归寝</td>
+						</tr>
+						</tr>
+							<tr>
+							<td>刘一一</td>
+							<td>3号楼</td>
+							<td>未归寝</td>
+						</tr>
+						</tr>
+							<tr>
+							<td>钱二二</td>
+							<td>3号楼</td>
+							<td>晚离寝</td>
+						</tr>
+						</tr>
+							<tr>
+							<td>孙三三</td>
+							<td>4号楼</td>
+							<td>晚离寝</td>
+						</tr>
+						</tr>
+							<tr>
+							<td>周九九</td>
+							<td>4号楼</td>
+							<td>晚离寝</td>
+						</tr>
+						</tr>
+							<tr>
+							<td>郑五五</td>
+							<td>5号楼</td>
+							<td>未离寝</td>
+						</tr>
+						
+					</table>
+					<div style="text-align: center;margin: 4vh;">
+						<button class="mui-icon mui-icon-arrowleft  mui-btn-primary mui-btn-outlined"   style="font-size: 14px;" onclick="prePage()">
+							上一页
+						</button>
+						<button class="mui-icon mui-icon-arrowright  mui-btn-primary mui-btn-outlined" style="font-size: 14px;" onclick="nextPage()">
+							下一页
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			 mui('.mui-card').on('.dd',function() {
+			 	console.log('dddddddddd')
+                //规定年月日的选择
+                var dtpicker = new mui.DtPicker({
+                    type: "date", //设置日历初始视图模式    //真正的月份比写的多一个月。  type的类型你还是可以选择date datetime month time hour 
+                    beginDate: new Date(2000, 01, 01, 0, 0), //设置开始日期   ///yg备注：括号中不填
+                    endDate: new Date(2020, 01, 01, 0, 0), //设置结束日期    //真正的是10.21
+                    labels: ['年', '月', '日'] //设置默认标签区域提示语 
+                });
+                dtpicker.show(function(e) {
+                    console.log(e);
+                    //获取到时间戳
+                    let date = new Date(e.value).getTime() / 1000;
+                    console.log(date);
+                });
+            });
+            
+            //分页显示提示框
+            function prePage(){
+            	mui.toast("测试数据已加载完成", {
+					duration:'short',
+					type:'div'
+				})
+            }
+            
+            function nextPage(){
+            	mui.toast("测试数据已加载完成", {
+					duration:'short',
+					type:'div'
+				})
+            }
+		</script>
+	</body>
+
+</html>
